@@ -3,22 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectrerata;
+package uas;
 
 /**
  *
  * @author user
  */
-public class MyProject {
+public class UAS {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        ArrayProcessing r =new ArrayProcessing();
-        r.input();
-        r.output();
-        r.urutkan(r.dataBil);
+    String x;
+    public void cetak(int x){
+        System.out.println(this.x);
     }
+    public static void main(String[] args) {
+        // TODO code application logic here
+      UAS a = new UAS();
+      a.cetak("halo");
     
+}
 }

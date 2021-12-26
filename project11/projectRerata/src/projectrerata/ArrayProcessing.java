@@ -13,7 +13,6 @@ public class ArrayProcessing {
   int [] dataBil = new int [100];
   int n;
     private int maks;
-  
   void input() {
       Scanner input = new Scanner (System.in);
       System.out.print("Masukkan banyaknya data (n) : ");
@@ -37,17 +36,18 @@ public class ArrayProcessing {
       System.out.println("Rerata: " + this.hitungRerata(this.dataBil));
       System.out.println("Nilai maksimal :" + this.cariMax(this.dataBil));
       System.out.println("Nilai minimal :" + this.cariMin(this.dataBil));
+      System.out.println(this.urutkan(dataBil));
+      
   }
   
   int cariMax(int[] data){
-      int x = this.n -1;
-      int maksimal = 0;
-      for(int i=0; i<x;i++){
+      int x = this.n ;
+      int maksimal = this.dataBil[0];
+      for(int i=1; i<x;i++){
           int a = this.dataBil[i];
-          int b = this.dataBil[i+1];
          
-          if(b>a){
-               maksimal = b;
+          if(maksimal>a){
+               maksimal = maksimal;
           } else {
               maksimal = a;
           }
@@ -55,20 +55,39 @@ public class ArrayProcessing {
       return maksimal;
   } 
   int cariMin(int[] data){
-      int x = this.n -1;
-      int minimal = 9999;
-      for(int i=0; i<x;i++){
+      int x = this.n;
+      int minimal = this.dataBil[0];
+      for(int i=1; i<x;i++){
           int a = this.dataBil[i];
-          int b = this.dataBil[i+1];
           
-          if(b<a){
-               minimal = b;
+          if(minimal <a){
+               minimal = minimal;
           } else{
-              if(a < b){
+              if(a < minimal){
                   minimal = a;
               }
           }
       }
       return minimal;
+  }
+  
+  ArrayList urutkan(int[] data){
+      ArrayList A = new ArrayList();
+      for (int i = 0; i<this.n; i++){
+          for(int j= 0; j<this.n-1; j++){
+              int bil1 = data[j];
+              int bil2 = data[j+1];
+              if (bil1 < bil2){
+                  data[j] = bil2;
+                  data[j+1] = bil1;
+                    
+              }
+            
+          }
+          A.add(0, data[i]);
+         
+      }
+      
+      return A;
   }
 }

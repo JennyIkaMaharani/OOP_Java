@@ -3,22 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectrerata;
+package simplearraylist;
 
 /**
  *
  * @author user
  */
-public class MyProject {
+public class SimpleArrayList {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayProcessing r =new ArrayProcessing();
-        r.input();
-        r.output();
-        r.urutkan(r.dataBil);
+        // TODO code application logic here
     }
     
 }
