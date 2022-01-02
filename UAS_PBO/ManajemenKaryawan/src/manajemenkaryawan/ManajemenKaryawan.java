@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectrerata;
-
+package manajemenkaryawan;
+import java.util.*;
 /**
  *
- * @author user
+ * @author jenny
  */
-public class MyProject {
-
+public class ManajemenKaryawan {
+    ArrayList karyawan = new ArrayList();
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        ArrayProcessing r =new ArrayProcessing();
-        r.input();
-        r.output();
-        
-    }
     
+    public static void main(String[] args) {
+       ArrayList karyawan = new ArrayList();
+       TambahData x = new TambahData();
+       x.menu();
+    }
 }
