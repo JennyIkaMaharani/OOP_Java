@@ -24,10 +24,8 @@ public class TambahData extends Pilihan{
                 case "1":
                    this.menu();
                 case "2":
-                    ArrayList result = this.proses();
-                    ManajemenKaryawan x = new ManajemenKaryawan();
-                    x.karyawan.add(result);
-                    this.lihatPilihan();
+                    
+                    this.proses();
                     
             }
         
@@ -81,8 +79,9 @@ public class TambahData extends Pilihan{
             int jumlahAnak = input.nextInt();
             y.add(gol);;
         } 
-       
-        return y;
+                    ManajemenKaryawan x = new ManajemenKaryawan();
+                    x.karyawan.add(y);
+        return x;
     }
         
 

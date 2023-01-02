@@ -22,10 +22,10 @@ Scanner input = new Scanner(System.in);
         boolean stat = false;
         int ind = -1;
         for (int i=0; i<dataKaryawan.size(); i++){
-            if(dataKaryawan.get(i).
+           ArrayList data1 = (ArrayList) dataKaryawan.get(i);
+                
+            }
         }
-        
-    }
 
     @Override
     void lihatPilihan() {
@@ -39,8 +39,10 @@ Scanner input = new Scanner(System.in);
                    a.menu();
 
             }
+    }
         
-    }    
+    }
+
     
     
-}
+
